@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/js_115_tms-zngs/assets/favicon-DFyiTuTp.svg" type="image/svg+xml" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/js_115_tms-zngs/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/js_115_tms-zngs/assets/vendor-BgWgrTJC.js">
+    <link rel="stylesheet" crossorigin href="/js_115_tms-zngs/assets/vendor-Cgr4bB_E.css">
+    <link rel="stylesheet" crossorigin href="/js_115_tms-zngs/assets/index-DduxwwW-.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="container header-container">
+    <h2 class="logo">
+      Lloyd
+      <span class="logo-header-span">Jefferson.</span>
+    </h2>
+    <div class="theme-toggle-div">
+      <label id="switch" class="switch">
+        <input type="checkbox" id="theme-toggle" />
+        <span class="slider round overlay"></span>
+      </label>
+    </div>
+    <nav class="navigation">
+      <ul class="nav-list-head">
+        <li class="nav-item-head"><a href="#about-me">About Me</a></li>
+        <li class="nav-item-head"><a href="#projects">Projects</a></li>
+        <li class="nav-item-head"><a href="#work-together">Contacts</a></li>
+      </ul>
+    </nav>
+    <button type="button" class="burger-btn">
+      <svg class="icon-burger" width="32" height="32">
+        <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-menu"></use>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+
+<div class="modal-overlay">
+  <div class="mobile-menu">
+    <h2>
+      <a href="#" class="logo">
+        Lloyd
+        <span class="logo-header-span">Jefferson.</span>
+      </a>
+    </h2>
+    <button type="button" class="burger-btn modal-btn">
+      <svg class="icon-close" width="32" height="32">
+        <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-menu-close"></use>
+      </svg>
+    </button>
+  </div>
+  <ul class="nav-list">
+    <li class="nav-item"><a href="#about-me" class="modal-link">About me</a></li>
+    <li class="nav-item"><a href="#projects" class="modal-link">Projects</a></li>
+    <li class="nav-item"><a href="#work-together" class="modal-link">Contacts</a></li>
+  </ul>
+  <img
+    src="/js_115_tms-zngs/assets/decor-hero-mobile-kYeFI4uD.png"
+    alt="bg-header"
+    class="bg-header"
+  />
+</div>
+
+
+    <main>
+      <section class="section-hero">
+  <div class="container hero-container">
+    <h1 class="title">
+      Hello, I am
+      <img    src="data:image/jpeg;base64,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" 
+  srcset="data:image/jpeg;base64,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 1x, /js_115_tms-zngs/assets/hero-desktop-2x-6aCRwjb5.jpg 2x"  alt="hero" class="hero-img" />
+      <span class="span-title">Fullstack developer</span>
+    </h1>
+    <div class="wrapp-hero-text">
+      <a href="#work-together" class="wrapp-hero">
+        <div class="wrapp-arrow">
+            <svg class="hero-arrow" width="28">
+                <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-arrow-hero"></use>
+            </svg>
+            <p class="hero-link">Order the project</p>
+        </div>
+        <div class="background-wrapp"></div>
+      </a>
+      <p class="hero-text">
+        I work with people all over the world to create
+        <span class="green-text">impressive </span>and
+        <span class="green-text">functional websites </span>that reflect each
+        client’s unique personality.
+      </p>
+    </div>
+  </div>
+  <ul class="hero-list">
+    <li class="hero-item"><a href="https://www.instagram.com/goitclub/" class="hover-link" target="_blank">Instagram</a></li>
+    <li class="hero-item"><a href="https://www.facebook.com/goITclub/" class="hover-link" target="_blank">Facebook</a></li>
+    <li class="hero-item"><a href="https://www.linkedin.com/school/goit-start-your-career-in-it" class="hover-link" target="_blank">Linkedin</a></li>
+    <li class="hero-item"><a href="https://github.com/tms-zngs/js-team-17" class="hover-link" target="_blank">GitHub</a></li>
+  </ul>
+</section>
+
+      <section class="about-me" id="about-me">
+  <div class="container about-me-container">
+    <h2 class="title-about">ABOUT <span class="title-me">ME</span></h2>
+    <div class="about-me-content">
+      <picture>
+        <source
+          media="(min-width: 1280px)"
+          srcset="/js_115_tms-zngs/assets/about-me-desktop-1x--Q_xMuon.jpg 1x, /js_115_tms-zngs/assets/about-me-desktop-2x-DxfXScLR.jpg 2x"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="/js_115_tms-zngs/assets/about-me-tablet-1x-0jBFVdrf.jpg 1x, /js_115_tms-zngs/assets/about-me-tablet-2x-X2MFhK2z.jpg 2x"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="/js_115_tms-zngs/assets/about-me-mobile-1x-Cpt8aAG5.jpg 1x, /js_115_tms-zngs/assets/about-me-mobile-2x-CKmmv_mf.jpg 2x"
+        />
+        <img
+          class="title-img"
+          src="/js_115_tms-zngs/assets/about-me-mobile-1x-Cpt8aAG5.jpg"
+          alt="Lloyd Jefferson"
+        />
+      </picture>
+
+      <div class="bio">
+        <h3 class="bio-title">BIO</h3>
+        <p class="text-bio">
+          I'm Lloyd Jefferson, a talented programmer specializing<br />
+          in software development. My expertise spans various programming
+          languages and technologies, and I am dedicated to continually
+          enhancing my skills. I thrive on seeking unconventional and creative
+          solutions to problems, leveraging a high level of analytical skills to
+          effectively tackle even the most challenging tasks.
+        </p>
+        <p class="text-bio">
+          Adaptable to both independent and team-oriented work, I collaborate
+          seamlessly with colleagues, exchanging ideas and finding optimal
+          solutions. My professional maturity enables me to navigate challenges
+          and stressful situations with a calm demeanor, maintaining a
+          consistently high quality of work. Committed to self-improvement, I
+          actively engage in studying new technologies and practices to stay
+          current with the<br />
+          latest innovations in the field.
+        </p>
+      </div>
+    </div>
+    <div class="education-role-wrapper">
+      <div class="education">
+        <h3 class="education-title">EDUCATION</h3>
+        <ul class="list-education">
+          <li class="list-education-item">
+            <span class="dot"></span>
+            <p class="education-text">
+              2018 - 2019 / Frontend Development Diploma, GoIT IT School, New
+              York
+            </p>
+          </li>
+          <li class="list-education-item">
+            <span class="dot"></span>
+            <p class="education-text">
+              2019 - 2020 / Advanced Web Development Certificate, GoIT IT
+              School, New York
+            </p>
+          </li>
+          <li class="list-education-item">
+            <span class="dot"></span>
+            <p class="education-text">
+              2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="role">
+        <h3 class="role-title">ROLE</h3>
+        <ul class="list-role">
+          <li class="list-role-item">HeadlessCMS, Wordpress</li>
+          <li class="list-role-item">Frontend development</li>
+          <li class="list-role-item">Blender (enjoy)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="tech-skills-section" id="tech-skills-section">
+  <h2 class="visually-hidden">Tech Skills</h2>
+
+  <div class="marquee up">
+    <div class="marquee-inner">
+      <p class="marquee-line marquee-line-up">
+        <span class="dot-up"></span> HTML/CSS
+        <span class="dot-up"></span> JavaScript
+        <span class="dot-up"></span> React
+        <span class="dot-up"></span> Node.js
+        <span class="dot-up"></span> React Native
+        <span class="dot-up"></span> TypeScript
+      </p>
+      <p class="marquee-line marquee-line-up">
+        <span class="dot-up"></span> HTML/CSS
+        <span class="dot-up"></span> JavaScript
+        <span class="dot-up"></span> React
+        <span class="dot-up"></span> Node.js
+        <span class="dot-up"></span> React Native
+        <span class="dot-up"></span> TypeScript
+      </p>
+    </div>
+  </div>
+
+  <div class="marquee down">
+    <div class="marquee-inner">
+      <p class="marquee-line marquee-line-down">
+        <span class="dot-down"></span> HTML/CSS
+        <span class="dot-down"></span> JavaScript
+        <span class="dot-down"></span> React
+        <span class="dot-down"></span> Node.js
+        <span class="dot-down"></span> React Native
+        <span class="dot-down"></span> TypeScript
+      </p>
+      <p class="marquee-line marquee-line-down">
+        <span class="dot-down"></span> HTML/CSS
+        <span class="dot-down"></span> JavaScript
+        <span class="dot-down"></span> React
+        <span class="dot-down"></span> Node.js
+        <span class="dot-down"></span> React Native
+        <span class="dot-down"></span> TypeScript
+      </p>
+    </div>
+  </div>
+</section>
+
+      <section class="projects" id="projects">
+  <div class="my-projects container">
+    <h2 class="projects-title">
+      my <span class="projects-title-span">projects</span>
+    </h2>
+
+    <ul class="projects-list">
+      <li class="projects-item">
+        <img
+          src="/js_115_tms-zngs/assets/wallet-CV7JT6HV.jpg"
+          srcset="/js_115_tms-zngs/assets/wallet-CV7JT6HV.jpg 1x, /js_115_tms-zngs/assets/wallet@2x-Ghca0UNm.jpg 2x"
+          alt="Wallet webservice"
+          class="project-item-img"
+        />
+
+        <div class="project-title-botton">
+          <p class="technologies-text">React, JavaScript, Node JS, Git</p>
+
+          <div class="projects-item-technologies">
+            <h3 class="project-item-title">Wallet webservice</h3>
+            <a
+              class="projects-button-link"
+              href="https://github.com/tms-zngs/js-team-17#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="projects-button-link-text">VISIT</span>
+              <svg class="button-arrow-icon" width="24" height="24">
+                <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="projects-item">
+        <div class="projects-item-img">
+          <img
+            src="/js_115_tms-zngs/assets/green-D1uxuvO0.jpg"
+            srcset="/js_115_tms-zngs/assets/green-D1uxuvO0.jpg 1x, /js_115_tms-zngs/assets/green@2x-X9e20M6O.jpg 2x"
+            alt="Green harvest webservice"
+            class="project-item-img"
+          />
+        </div>
+        <div class="project-title-botton">
+          <p class="technologies-text">React, JavaScript, Node JS, Git</p>
+
+          <div class="projects-item-technologies">
+            <h3 class="project-item-title">Green harvest webservice</h3>
+            <a
+              class="projects-button-link"
+              href="https://github.com/tms-zngs/js-team-17#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="projects-button-link-text">VISIT</span>
+              <svg class="button-arrow-icon" width="24" height="24">
+                <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="projects-item">
+        <div class="projects-item-img">
+          <img
+            src="/js_115_tms-zngs/assets/english-5JF_P4sC.jpg"
+            srcset="/js_115_tms-zngs/assets/english-5JF_P4sC.jpg 1x, /js_115_tms-zngs/assets/english@2x-CSqeNpRE.jpg 2x"
+            alt="English Exellence webservice"
+            class="project-item-img"
+          />
+        </div>
+        <div class="project-title-botton">
+          <p class="technologies-text">React, JavaScript, Node JS, Git</p>
+
+          <div class="projects-item-technologies">
+            <h3 class="project-item-title">English Exellence webservice</h3>
+            <a
+              class="projects-button-link"
+              href="https://github.com/tms-zngs/js-team-17#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="projects-button-link-text">VISIT</span>
+              <svg class="button-arrow-icon" width="24" height="24">
+                <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="projects-item">
+        <div class="projects-item-img">
+          <img
+            src="/js_115_tms-zngs/assets/power-4qEV6A6Q.jpg"
+            srcset="/js_115_tms-zngs/assets/power-4qEV6A6Q.jpg 1x, /js_115_tms-zngs/assets/power@2x-B9hlK9hC.jpg 2x"
+            alt="Power pulse webservice"
+            class="project-item-img"
+          />
+        </div>
+        <div class="project-title-botton">
+          <p class="technologies-text">React, JavaScript, Node JS, Git</p>
+
+          <div class="projects-item-technologies">
+            <h3 class="project-item-title">power pulse webservice</h3>
+            <a
+              class="projects-button-link"
+              href="https://github.com/tms-zngs/js-team-17#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="projects-button-link-text">VISIT</span>
+              <svg class="button-arrow-icon" width="24" height="24">
+                <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="projects-item">
+        <div class="projects-item-img">
+          <img
+            src="/js_115_tms-zngs/assets/mimino-CdgrJZev.jpg"
+            srcset="/js_115_tms-zngs/assets/mimino-CdgrJZev.jpg 1x, /js_115_tms-zngs/assets/mimino@2x-mGoZsxDQ.jpg 2x"
+            alt="Mimino website"
+            class="project-item-img"
+          />
+        </div>
+        <div class="project-title-botton">
+          <p class="technologies-text">React, JavaScript, Node JS, Git</p>
+
+          <div class="projects-item-technologies">
+            <h3 class="project-item-title">mimino website</h3>
+            <a
+              class="projects-button-link"
+              href="https://github.com/tms-zngs/js-team-17#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="projects-button-link-text">VISIT</span>
+              <svg class="button-arrow-icon" width="24" height="24">
+                <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="projects-item">
+        <div class="projects-item-img">
+          <img
+            src="/js_115_tms-zngs/assets/vyshyvanka-ChT6sPVh.jpg"
+            srcset="/js_115_tms-zngs/assets/vyshyvanka-ChT6sPVh.jpg 1x, /js_115_tms-zngs/assets/vyshyvanka@2x-CnSUCKPJ.jpg 2x"
+            alt="Vyshyvanka"
+            class="project-item-img"
+          />
+        </div>
+        <div class="project-title-botton">
+          <p class="technologies-text">React, JavaScript, Node JS, Git</p>
+
+          <div class="projects-item-technologies">
+            <h3 class="project-item-title">vishivanka vibes landing</h3>
+            <a
+              class="projects-button-link"
+              href="https://github.com/tms-zngs/js-team-17#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="projects-button-link-text">VISIT</span>
+              <svg class="button-arrow-icon" width="24" height="24">
+                <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="projects-item">
+        <div class="projects-item-img">
+          <img
+            src="/js_115_tms-zngs/assets/chego-D0kRnoxY.jpg"
+            srcset="/js_115_tms-zngs/assets/chego-D0kRnoxY.jpg 1x, /js_115_tms-zngs/assets/chego@2x-Bz2KWXql.jpg 2x"
+            alt="Chego"
+            class="project-item-img"
+          />
+        </div>
+        <div class="project-title-botton">
+          <p class="technologies-text">React, JavaScript, Node JS, Git</p>
+
+          <div class="projects-item-technologies">
+            <h3 class="project-item-title">chego jewelry website</h3>
+            <a
+              class="projects-button-link"
+              href="https://github.com/tms-zngs/js-team-17#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="projects-button-link-text">VISIT</span>
+              <svg class="button-arrow-icon" width="24" height="24">
+                <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="projects-item">
+        <div class="projects-item-img">
+          <img
+            src="/js_115_tms-zngs/assets/energy-BrtTnaqT.jpg"
+            srcset="/js_115_tms-zngs/assets/energy-BrtTnaqT.jpg 1x, /js_115_tms-zngs/assets/energy@2x-E8OrVE7Q.jpg 2x"
+            alt="Energy"
+            class="project-item-img"
+          />
+        </div>
+        <div class="project-title-botton">
+          <p class="technologies-text">React, JavaScript, Node JS, Git</p>
+
+          <div class="projects-item-technologies">
+            <h3 class="project-item-title">energy flow webservice</h3>
+            <a
+              class="projects-button-link"
+              href="https://github.com/tms-zngs/js-team-17#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="projects-button-link-text">VISIT</span>
+              <svg class="button-arrow-icon" width="24" height="24">
+                <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="projects-item">
+        <div class="projects-item-img">
+          <img
+            src="/js_115_tms-zngs/assets/fruitbox-BYBmkmt_.jpg"
+            srcset="/js_115_tms-zngs/assets/fruitbox-BYBmkmt_.jpg 1x, /js_115_tms-zngs/assets/fruitbox@2x-PvTTqAFi.jpg 2x"
+            alt="Fruitbox"
+            class="project-item-img"
+          />
+        </div>
+        <div class="project-title-botton">
+          <p class="technologies-text">React, JavaScript, Node JS, Git</p>
+
+          <div class="projects-item-technologies">
+            <h3 class="project-item-title">fruitbox online store</h3>
+            <a
+              class="projects-button-link"
+              href="https://github.com/tms-zngs/js-team-17#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="projects-button-link-text">VISIT</span>
+              <svg class="button-arrow-icon" width="24" height="24">
+                <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="projects-item">
+        <div class="projects-item-img">
+          <img
+            src="/js_115_tms-zngs/assets/starling-BXZLeYqn.jpg"
+            srcset="/js_115_tms-zngs/assets/starling-BXZLeYqn.jpg 1x, /js_115_tms-zngs/assets/starling@2x-otGTicgo.jpg 2x"
+            alt="Starlight"
+            class="project-item-img"
+          />
+        </div>
+        <div class="project-title-botton">
+          <p class="technologies-text">React, JavaScript, Node JS, Git</p>
+
+          <div class="projects-item-technologies">
+            <h3 class="project-item-title">starlight studio landing page</h3>
+            <a
+              class="projects-button-link"
+              href="https://github.com/tms-zngs/js-team-17#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="projects-button-link-text">VISIT</span>
+              <svg class="button-arrow-icon" width="24" height="24">
+                <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="projects-button-bottom">
+      <button class="load-more-button">load more</button>
+      <svg
+        class="load-more-line"
+        viewBox="0 0 119 2"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1.5 0C0.947715 -4.82823e-08 0.5 0.447715 0.5 1C0.5 1.55228 0.947715 2 1.5 2L1.5 0ZM1.5 2L118.5 2.00001L118.5 1.02285e-05L1.5 0L1.5 2Z"
+          fill="#00B068"
+        />
+      </svg>
+    </div>
+  </div>
+</section>
+
+      <section class="benefits-section">
+    <div class="container benefits-container">
+        <h2 class="benefits-tittle">
+            <span class="span-tittle">Benefits 
+        </span>of
+working with me</h2>
+<ul class="benefits-list">
+    <li class="benefits-item empty1"></li>
+    <li class="benefits-item empty2"></li>
+    <li class="benefits-item">
+        <div class="icon-wrapper">
+            <svg class="benefits-icon" width="24" height="24">
+                <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-user"></use>
+            </svg>
+        </div>
+        <h3 class="benefits-subtitle">Expertise</h3>
+        <p class="benefits-descr">With extensive experience in development, I have a deep understanding of programming and website development.</p>
+    </li>
+    <li class="benefits-item">
+        <div class="icon-wrapper">
+            <svg class="benefits-icon" width="24" height="24">
+                <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-chat"></use>
+            </svg>
+        </div>
+        <h3 class="benefits-subtitle">Communication</h3>
+        <p class="benefits-descr">Understanding your needs and wants is my priority and I am always available for discussions and open to corrections.</p>
+    </li>
+    <li class="benefits-item">
+        <div class="icon-wrapper">
+            <svg class="benefits-icon" width="24" height="24">
+                <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-brush"></use>
+            </svg>
+        </div>
+        <h3 class="benefits-subtitle">Art</h3>
+        <p class="benefits-descr">Thanks to my creative nature, I am ready to accept challenges and help you bring your ideas to life.</p>
+    </li>
+    <li class="benefits-item">
+        <div class="icon-wrapper">
+            <svg class="benefits-icon" width="24" height="24">
+                <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-sand-watch"></use>
+            </svg>
+        </div>
+        <h3 class="benefits-subtitle">Urgent execution</h3>
+        <p class="benefits-descr">I understand how important time is to you. Ready to work quickly and efficiently, without reducing the quality of work.</p>
+    </li>
+</ul>
+    </div>
+</section>
+      <section class="faq" id="faq">
+  <div class="container faq-container">
+    <h2 class="faq-title">
+      Frequently Asked
+      <span class="faq-title-accent-wrapper"> Question</span>
+    </h2>
+    <ul class="faq-list">
+      <li class="faq-item ac ac-active">
+        <div class="faq-question">
+          <h3 class="faq-question-title ac-header">
+            What programming languages ​​are most often used in your project?
+          </h3>
+          <button type="button" class="faq-btn-accordion ac-trigger">
+            <svg class="faq-btn-svg faq-btn-svg-closed">
+              <use href=""></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq-answer ac-panel">
+          <p class="faq-answer-item">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </li>
+      <li class="faq-item ac">
+        <div class="faq-question">
+          <h3 class="faq-question-title ac-header">
+            What are the deadlines for the project?
+          </h3>
+          <button type="button" class="faq-btn-accordion ac-trigger">
+            <svg class="faq-btn-svg faq-btn-svg-closed">
+              <use href=""></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq-answer ac-panel">
+          <p class="faq-answer-item">
+            The terms of project implementation depend to a large extent on a
+            number of factors, such as the scope of the project, its complexity,
+            and the availability of resources. Determining exact deadlines is a
+            difficult task, and it usually occurs during the planning phase of
+            the project.
+          </p>
+        </div>
+      </li>
+      <li class="faq-item ac">
+        <div class="faq-question">
+          <h3 class="faq-question-title ac-header">
+            What payment methods do you accept?
+          </h3>
+          <button type="button" class="faq-btn-accordion ac-trigger">
+            <svg class="faq-btn-svg faq-btn-svg-closed">
+              <use href=""></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq-answer ac-panel">
+          <p class="faq-answer-item">
+            Payment through credit and debit cards such as Visa, MasterCard,
+            specialized electronic payment systems such as PayPal, as well as
+            payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+          </p>
+        </div>
+      </li>
+      <li class="faq-item ac">
+        <div class="faq-question">
+          <h3 class="faq-question-title ac-header">How can I contact you?</h3>
+          <button type="button" class="faq-btn-accordion ac-trigger">
+            <svg class="faq-btn-svg faq-btn-svg-closed">
+              <use href=""></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq-answer ac-panel">
+          <p class="faq-answer-item">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </li>
+      <li class="faq-item ac">
+        <div class="faq-question">
+          <h3 class="faq-question-title ac-header">
+            Do you provide advice or support?
+          </h3>
+          <button type="button" class="faq-btn-accordion ac-trigger">
+            <svg class="faq-btn-svg faq-btn-svg-closed">
+              <use href=""></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq-answer ac-panel">
+          <p class="faq-answer-item">
+            The terms of project implementation depend to a large extent on a
+            number of factors, such as the scope of the project, its complexity,
+            and the availability of resources. Determining exact deadlines is a
+            difficult task, and it usually occurs during the planning phase of
+            the project.
+          </p>
+        </div>
+      </li>
+      <li class="faq-item ac">
+        <div class="faq-question">
+          <h3 class="faq-question-title ac-header">
+            What does the process of developing a software product look like
+            from idea to implementation?
+          </h3>
+          <button type="button" class="faq-btn-accordion ac-trigger">
+            <svg class="faq-btn-svg faq-btn-svg-closed">
+              <use href=""></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq-answer ac-panel">
+          <p class="faq-answer-item">
+            Payment through credit and debit cards such as Visa, MasterCard,
+            specialized electronic payment systems such as PayPal, as well as
+            payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="section-reviews">
+  <div class="container container-reviews">
+    <h2 class="reviews-title">reviews</h2>
+
+    <div class="swiper">
+      <ul class="swiper-wrapper"></ul>
+
+      <div class="container-btn">
+        <button type="button" class="swiper-button-prev">
+          <svg width="24" height="24" class="btn-icon">
+            <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button type="button" class="swiper-button-next">
+          <svg width="24" height="24" class="btn-icon">
+            <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="work-together" id="work-together">
+  <div class="container work-together-container">
+    <div class="header-container-work-together">
+      <h2 class="work-together-header">
+        Let’s <span class="work-together-green-header"> work together</span>
+      </h2>
+    </div>
+    <div class="section-wrapper">
+      <div class="desc-nav-container">
+        <p class="form-description">
+          Contact me to transform your ideas into exceptional solutions.
+        </p>
+        <ul class="form-contact-list">
+          <li class="form-item-list">
+            <svg class="icon-form" width="24" height="24">
+              <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-phone"></use>
+            </svg>
+            <a href="tel:+380904567890">+380 90 456 78 90</a>
+          </li>
+          <li class="form-item-list">
+            <svg class="icon-form" width="24" height="24">
+              <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-mail"></use>
+            </svg>
+            <a href="mailto:lloydjefferson@gmail.com"
+              >lloydjefferson@gmail.com</a
+            >
+          </li>
+          <li class="form-item-list">
+            <svg class="icon-form" width="24" height="24">
+              <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-location"></use>
+            </svg>
+            <address class="form-address">
+              <a
+                href="https://www.google.com/maps/place/%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA,+%D0%A1%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D1%96+%D0%A8%D1%82%D0%B0%D1%82%D0%B8+%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B8/@40.5660911,-74.7217885,8.89z/data=!4m6!3m5!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62!8m2!3d40.7127753!4d-74.0059728!16zL20vMDJfMjg2?entry=ttu&g_ep=EgoyMDI1MDQyMi4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                >USA, New York</a
+              >
+            </address>
+          </li>
+        </ul>
+      </div>
+      <div class="form-container">
+        <form id="contact-form">
+          <div class="email-container">
+            <label for="form-email" class="form-user-label"></label>
+            <input
+              type="email"
+              class="form-email"
+              id="form-email"
+              name="form-email"
+              pattern="([A-Za-z0-9_.-]{1,})@([A-Za-z0-9_.-]{1,})+\.([A-Za-z]{2,8})"
+              placeholder="Your Email*"
+              required
+            />
+            <svg id="email-valid-icon" class="valid-icon">
+              <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-form-checked"></use>
+            </svg>
+            <p id="email-error" class="error-message">
+              Invalid email, try again
+            </p>
+          </div>
+          <div class="message-container">
+            <label class="form-user-label" for="user-message"></label>
+            <textarea
+              class="form-message"
+              id="user-message"
+              name="user-message"
+              placeholder="Message"
+              required
+            ></textarea>
+          </div>
+          <button class="button-form" type="submit">SEND MESSAGE</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="success-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal">
+        <svg class="icon-modal-close" width="24" height="24">
+          <use href="/js_115_tms-zngs/assets/sprite-Ci5rsj_u.svg#icon-modal-close"></use>
+        </svg>
+      </button>
+      <h3 class="modal-header">Thank you for your interest in cooperation!</h3>
+      <p class="modal-text">
+        The manager will contact you shortly to discuss further details and
+        opportunities for cooperation. Please stay in touch.
+      </p>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+  <div class="footer-container container">
+    <p class="footer-logo">Lloyd<span class="logo-part">Jefferson.</span></p>
+    <ul class="footer-list">
+      <li>
+        <a href="https://www.instagram.com/goitclub/" target="_blank" class="footer-networks"
+          >Instagram</a
+        >
+      </li>
+      <li>
+        <a href=" https://www.facebook.com/goITclub/" target="_blank" class="footer-networks"
+          >Facebook</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/school/goit-start-your-career-in-it"
+          target="_blank"
+          class="footer-networks"
+          >Linkedin</a
+        >
+      </li>
+      <li><a href="https://github.com/tms-zngs/js-team-17 " target="_blank" class="footer-networks">GitHub</a></li>
+    </ul>
+    <p class="footer-copyright">© Copyright 2024. Made by LloydJefferson</p>
+  </div>
+</footer>
+
+
+  </body>
+</html>
